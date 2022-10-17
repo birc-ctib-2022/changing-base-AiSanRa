@@ -28,5 +28,16 @@ def change_to_base(n: int, b: int) -> str:
     >>> change_to_base(31, 16)
     '1F'
     """
+    
+    final_list = []
     assert 2 <= b <= 16
-    return ''  # FIXME: return n in the right base
+    if n == 0:
+        return "0"
+    if n > 0:
+        final_list.append(n % b)
+        n = n//b
+    if n < 0:
+        negative_list.append(n % b)
+        n = n//b
+        final_list[ -i for i in negative_list ]
+    return ''join(final_lsit)  # FIXME: return n in the right base
